@@ -4,6 +4,7 @@ const stoptBtn = document.querySelector('[data-stop]');
 const bgColor = document.querySelector('body');
 
 let timerId = null;
+
 startBtn.addEventListener("click",()=>{
     timerId = setInterval(setBodyBgColor,1000);
     startBtn.disabled = true;
@@ -15,7 +16,6 @@ stoptBtn.addEventListener("click",() => {
     startBtn.disabled = false;
     clearInterval(timerId);
 });
-
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
